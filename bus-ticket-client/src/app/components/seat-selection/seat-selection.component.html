@@ -1,0 +1,87 @@
+<div class="container mt-5">
+  <button class="btn btn-secondary mb-3" (click)="goBack()">← Back to Search</button>
+
+  <div class="card mb-3 shadow-sm" *ngIf="companyName">
+    <div class="card-body">
+      <h5 class="mb-0">{{ companyName }} - {{ busName }}</h5>
+      <p class="text-muted mb-0">Price: ৳{{ price }} per seat</p>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="!loading && seatPlan">
+    <div class="col-md-8">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">Select Your Seat</h4>
+        </div>
+        <div class="card-body">
+          <div class="seat-legend mb-4">
+            <span><span class="seat available"></span> Available</span>
+            <span><span class="seat booked"></span> Booked</span>
+            <span><span class="seat selected"></span> Selected</span>
+          </div>
+
+          <div class="seat-grid">
+            <div *ngFor="let seat of seatPlan.seats" [class]="getSeatClass(seat)" (click)="selectSeat(seat)">
+              {{ seat.seatNumber }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-header bg-success text-white">
+          <h5 class="mb-0">Passenger Details</h5>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="bookSeat()">
+            <div class="mb-3">
+              <label class="form-label fw-bold">Selected Seat</label>
+              <input type="text" class="form-control" [value]="selectedSeat?.seatNumber || 'None'" readonly>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Passenger Name *</label>
+              <input type="text" class="form-control" [(ngModel)]="passengerName" name="name" required placeholder="Enter your name">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Mobile Number *</label>
+              <input type="tel" class="form-control" [(ngModel)]="mobileNumber" name="mobile" required placeholder="01XXXXXXXXX">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Boarding Point *</label>
+              <input type="text" class="form-control" [(ngModel)]="boardingPoint" name="boarding" required placeholder="e.g., Gabtoli">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Dropping Point *</label>
+              <input type="text" class="form-control" [(ngModel)]="droppingPoint" name="dropping" required placeholder="e.g., Nasirabad">
+            </div>
+
+            <div class="mb-3">
+              <div class="alert alert-info">
+                <strong>Total Amount:</strong> ৳{{ price }}
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100" [disabled]="!selectedSeat || bookingInProgress">
+              <span *ngIf="bookingInProgress">
+                <span class="spinner-border spinner-border-sm me-2"></span>Booking...
+              </span>
+              <span *ngIf="!bookingInProgress">✓ Confirm Booking</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="loading" class="text-center mt-5">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;"></div>
+    <p class="mt-3">Loading seat plan...</p>
+  </div>
+</div>
