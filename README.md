@@ -389,11 +389,13 @@ Total tests: 12
 ### Manual Testing
 
 #### Using Swagger
-1. Navigate to https://localhost:7001/swagger
+1. Navigate to (https://localhost:7032/swagger/index.html)
 2. Try the `/api/search` endpoint
 3. Copy a `busScheduleId` from the response
 4. Use it to get seat plan
 5. Book a seat using the `/api/booking/book-seat` endpoint
+ 
+#### Using Frontend Link : http://localhost:4200/  
 
 #### Using Postman
 
@@ -518,7 +520,7 @@ BusTicketReservation/
 ## 📸 Screenshots
 
 ### 🔍 Bus Search Page
-![Search Page](docs/screenshots/search-page.png)
+![Search Page]()
 *Search for available buses by selecting origin, destination, and travel date*
 
 ### 📋 Available Buses List
