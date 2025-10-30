@@ -520,7 +520,7 @@ BusTicketReservation/
 ## 📸 Screenshots
 
 ### 🔍 Bus Search Page
-![Search Page]()
+![Search Page](https://github.com/Roki58/BusTicketReservationSystem/blob/96986c0792f4c8e8aebff7c044fdf1beb5457ab1/Search-Page.PNG)
 *Search for available buses by selecting origin, destination, and travel date*
 
 ### 📋 Available Buses List
