@@ -106,7 +106,7 @@ This project was developed as part of the **Internship Batch-3 Full-stack (.NET)
 - **Visual Studio 2022** - Backend IDE
 - **VS Code** - Frontend IDE
 - **pgAdmin** - Database Management
-- **Postman** - API Testing
+- **Swagger** - API Testing
 
 ---
 
@@ -233,8 +233,6 @@ Edit `src/BusTicketReservation.WebApi/appsettings.json`:
   }
 }
 ```
-
-**⚠️ Important:** Replace `YOUR_PASSWORD` with your PostgreSQL password.
 
 ### 3. Apply Database Migrations
 
