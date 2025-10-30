@@ -528,15 +528,15 @@ BusTicketReservation/
 *View all available buses with real-time seat availability and pricing*
 
 ### 🪑 Seat Selection
-![Seat Layout](docs/screenshots/seat-layout.png)
+![Seat Layout](https://github.com/Roki58/BusTicketReservationSystem/blob/842ee244f81c3504b6af5eeec84e4e6f4dd7858d/seat-selection.PNG)
 *Interactive seat layout with color-coded availability status*
 
 ### 📝 Booking Form
-![Booking Form](docs/screenshots/booking-form.png)
+![Booking Form](https://github.com/Roki58/BusTicketReservationSystem/blob/842ee244f81c3504b6af5eeec84e4e6f4dd7858d/Seatbook.PNG)
 *Enter passenger details and select boarding/dropping points*
 
 ### ✅ Booking Confirmation
-![Confirmation](docs/screenshots/confirmation.png)
+![Confirmation](https://github.com/Roki58/BusTicketReservationSystem/blob/842ee244f81c3504b6af5eeec84e4e6f4dd7858d/psenger.PNG)
 *Get instant confirmation with unique booking reference*
 
 ---
