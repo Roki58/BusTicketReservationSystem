@@ -524,7 +524,7 @@ BusTicketReservation/
 *Search for available buses by selecting origin, destination, and travel date*
 
 ### 📋 Available Buses List
-![Bus List](docs/screenshots/bus-list.png)
+![Bus List](https://github.com/Roki58/BusTicketReservationSystem/blob/b539faad49efc0f3120ea94d830b7535fc547077/Avaialable%20bus.PNG)
 *View all available buses with real-time seat availability and pricing*
 
 ### 🪑 Seat Selection
